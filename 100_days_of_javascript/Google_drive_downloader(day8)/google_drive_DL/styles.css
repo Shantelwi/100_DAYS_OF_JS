@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+.instructions{
+    font-size: 1.6rem;
+    width: 30%;
+    height: 100vh;
+    background-color: #1c2b2d;
+    padding-top: 5rem;
+    color: #eee;
+}
+
+.instructions h2 {
+    font-size: 3.5rem;
+    color: #ff4500;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.instructions h2::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    height: 2px;
+    background-color: #eee;
+}
+
+.instructions ol {
+    padding:1rem 0 0 1.5rem;
+}
+
+.instructions ol a {
+    color: #ff4500;
+    text-decoration: none;
+}
+
+.download-link{
+    width: 75%;
+    padding-top: 5rem;
+}
+
+.download-link section {
+    border: 2px solid #663399;
+    border-radius: 0 0 5px 5px;
+}
+
+main h1 {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 5rem;
+    color: #663399;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+main input[type=radio] {
+    display: none;
+}
+
+main nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #eee;
+    padding: 5px;
+    position: relative;
+    background-color: #cecece;
+    z-index: 1;
+}
+
+main nav label {
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1rem;
+    position: relative;
+    color: #303030;
+    cursor: pointer;
+}
+
+main nav label i {
+    padding-right:5px;
+    color:#ff4500;
+}
+
+nav .slide {
+    position: absolute;
+    top: 0;
+    left: 3%;
+    width: 26%;
+    height: 100%;
+    background-color: #663399;
+    border-radius: 3px;
+    z-index: -1;
+    transition: all .3s;
+}
+
+#audio:checked ~ nav .slide {
+    left: 33%;
+}
+
+#video:checked ~ nav .slide {
+    left: 67%;
+}
+
+#link:checked ~ nav label.link,
+#audio:checked ~ nav label.audio,
+#video:checked ~ nav label.video {
+    color: #fff;
+}
+
+.content {
+    display: none;
+}
+
+#link:checked ~ section .content-link {
+    display: block;
+}
+
+#audio:checked ~ section .content-audio {
+    display: block;
+}
+
+#video:checked ~ section .content-video {
+    display: block;
+}
+
+/* FORM STYLES */
+section .content {
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.content > i {
+    font-size: 3 rem;
+    color: #ff4500;
+    border: 2px solid;
+    padding: 8px;
+    border-radius: 5rem;
+}
+
+.content h2 {
+    font-size: 2rem;
+    line-height: 2;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.content p {
+    padding-bottom: 1rem;
+}
+
+.content form {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content form label {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content form label input {
+    display: block;
+    width: 100%;
+    padding: 1.3rem 3rem;
+    border-radius: 10px 0 10px 0;
+    border-bottom: 2px solid rgba(0,0,0,.4);
+    margin-bottom: 2rem;
+    background-color: rgba(0,0,0,.1);
+    outline: none;
+    color: #303030;
+    transition: all .3s;
+}
+
+.content form label input:focus:invalid {
+    font-size: 1.6rem;
+    border-bottom: 2px solid #ff4500;
+}
+
+.content form label input:focus:valid {
+    font-size: 1.6rem;
+    border-bottom: 2px solid #008000;
+    background-color: #e8f0fe;
+}
+
+.content form i {
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    font-size: 1.3rem;
+    color: #ff4500;
+}
+
+::placeholder {
+    font-size: 1.6rem;
+    color: #303030 ;
+}
+
+.content .btn {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: #ff4500;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.content .btn:hover {
+    background-color: #663399;
+
+}
+
+.embed-code {
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.content form textarea {
+    width: 100%;
+    height: 10rem;
+    outline: none;
+    font-size: 1.6rem;
+    font-family: inherit;
+}
+
+.embed-code span {
+    position: absolute;
+    right: 1px;
+    bottom: 5px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: #663399;
+    color: #fff;
+    padding: 5px 8px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.embed-code span:hover {
+    font-size: 1.8rem;
+}
+

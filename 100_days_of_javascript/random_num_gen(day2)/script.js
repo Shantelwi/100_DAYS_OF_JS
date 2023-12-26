@@ -1,0 +1,23 @@
+const number = document.querySelector(".number");
+const btn = document.querySelector(".generate");
+
+const generateNumber = () => {
+    //Generate number between 1 and 10
+    const randomNumber = Math.floor(Math.random() * 100 + 1);
+    number.innerHTML = randomNumber;
+};
+
+btn.addEventListener("click", generateNumber);
+
+// generateNumber();
+// if you dont want the number to be at 0 when the page loads call the function
+
+
+
+
+
+
+
+
+// const rand = Math.floor(Math.random() * 10 + 1);
+// console.log(rand);

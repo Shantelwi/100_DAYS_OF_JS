@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "name" : "Shantel Williams",
+        "age" : "25",
+        "email" : "Shantel@email.com"
+    },
+    {
+        "id" : 2,
+        "name" : "Rebeca Williams",
+        "age" : "24",
+        "email" : "rebeca@email.com"
+    },
+    {
+        "id" : 3,
+        "name" : "Tanya White",
+        "age" : "48",
+        "email" : "tw@email.com"
+    },
+    {
+        "id" : 4,
+        "name" : "Daija Williams",
+        "age" : "27",
+        "email" : "dw@email.com"
+    }
+]
